@@ -12,6 +12,7 @@ import java.util.*;
  */
 @Controller
 public class TestController {
+    //我的测试方法哪里去了？
 
     @RequestMapping("test1")
     public String test1(Model model){
