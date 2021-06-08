@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试1</title>
+</head>
+<link rel="stylesheet" type="text/css" href="/css/pages-cart.css" th:href="@{/css/pages-cart.css}"/>
+<body>
+<h2 th:text="${msg}"></h2>
+<table>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>生日</th>
+    <th>序号</th>
+    <tr th:each=" user,iterStat:${userlist}">
+        <td th:text="${user.name}"></td>
+    <td th:text="${user.age}"></td>
+    <td th:text="${#dates.format(user.birth,'yyyy-MM-dd')}"></td>
+    <td th:text="${iterStat.index+1}"></td>
+    </tr>
+</table>
+    <img th:src="${src}" height="200px" width="200px"/>
+    <span th:text="${user.name}"></span>
+    <span th:if="${flag=='yes'}">欢迎来到:</span>
+    <span th:unless="${flag=='no'}">北京</span>
+    <span th:switch="${admin}">
+        <p th:case="'admin'">admin登录了</p>
+        <p th:case="${manager}">manager登录了</p>
+    </span>
+<span th:text="${#strings.abbreviate(str,7)}"></span>
+<span th:text="${#strings.substring(str,0,4)}"></span>
+<div th:insert="~{footer :: copy}">
+</div>
+
+</body>
+</html>
