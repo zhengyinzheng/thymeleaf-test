@@ -12,7 +12,7 @@ import java.util.*;
  */
 @Controller
 public class TestController {
-    //我的测试方法哪里去了？
+   
 
     @RequestMapping("test1")
     public String test1(Model model){
@@ -42,5 +42,5 @@ public class TestController {
         model.addAttribute("str","啦啦啦啦啦啦啦啦啦啦啦啦啦");
         return "test1";
     }
-    //测试方法注释
+    //删除测试方法注释
 }
