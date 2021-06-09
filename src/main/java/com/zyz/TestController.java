@@ -42,4 +42,5 @@ public class TestController {
         model.addAttribute("str","啦啦啦啦啦啦啦啦啦啦啦啦啦");
         return "test1";
     }
+    //测试方法注释
 }
